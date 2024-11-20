@@ -1,0 +1,45 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+# Route for getting all fruits
+api_fruits:
+    path: /api/fruits
+    controller: App\Controller\FruitController::getFruits
+    methods: GET
+
+# Route for adding a new fruit
+api_fruit_create:
+    path: /api/fruits
+    controller: App\Controller\FruitController::addFruit
+    methods: POST
+
+# Route for deleting a fruit by ID
+api_fruit_delete:
+    path: /api/fruits/{id}
+    controller: App\Controller\FruitController::removeFruit
+    methods: DELETE
+    requirements:
+        id: '\d+'
+
+# Route for getting all vegetables
+api_vegetables:
+    path: /api/vegetables
+    controller: App\Controller\VegetableController::getVegetables
+    methods: GET
+
+# Route for adding a new vegetable
+api_vegetable_create:
+    path: /api/vegetables
+    controller: App\Controller\VegetableController::addVegetable
+    methods: POST
+
+# Route for deleting a vegetable by ID
+api_vegetable_delete:
+    path: /api/vegetables/{id}
+    controller: App\Controller\VegetableController::removeVegetable
+    methods: DELETE
+    requirements:
+        id: '\d+' 

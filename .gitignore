@@ -1,0 +1,55 @@
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+# Symfony / PHP related
+/vendor/
+/var/
+/public/bundles/
+/.env.local
+.env.*.local
+.env.local.php
+.env.cache
+/tests/bootstrap.php.cache
+
+# Logs and cache
+*.log
+*.cache
+*.phpunit.result.cache
+
+# IDE / Editor specific files
+.idea/
+.vscode/
+*.iml
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Node / Frontend
+/node_modules/
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+
+# Build files
+/build/
+/coverage/
+
+# Docker specific
+.docker
+docker-compose.override.yml
+*.env.docker
+
