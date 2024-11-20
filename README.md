@@ -36,7 +36,10 @@ service that seed some fruits and vegetables from json exist in file and then al
   ```
 6. Run test cases
   ```
-    php bin/phpunit
+    cp phpunit.xml.dist phpunit.xml
+    php bin/console doctrine:database:create --env=test
+    php bin/console doctrine:migrations:migrate --env=test
+    vendor/bin/phpunit
   ```
 7. Run Servers
   ```
