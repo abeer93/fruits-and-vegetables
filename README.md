@@ -55,26 +55,11 @@ Once the server is running, you can access the project at http://localhost:8000.
 | HTTP Method | Endpoint      | Description                             |             CURL example                             |
 |-------------|---------------|-----------------------------------------|------------------------------------------------------|
 | `GET`       | `/api/fruits` | Fetch a list of fruits with some filters| curl --location 'http://127.0.0.1:8000/api/vegetables?name=rot&minQuantity=50000&maxQuantity=65000' \--header 'Accept: application/json'|
-| `POST`      | `/api/fruits` | Create a new fruit                      | curl --location 'http://127.0.0.1:8000/api/fruits' \
---header 'Accept: application/json' \
---header 'Content-Type: application/json' \
---data '{
-    "name": "test_apple",
-    "quantity": 300,
-    "unit": "g"
-}'|
+| `POST`      | `/api/fruits` | Create a new fruit                      | curl --location 'http://127.0.0.1:8000/api/fruits' \ --header 'Accept: application/json' \ --header 'Content-Type: application/json' \--data '{"name": "test_apple", "quantity": 300,"unit": "g"}'|
 | `DELETE`    | `/api/fruits/{id}` | Delete a fruit by ID | curl --location --request DELETE 'http://127.0.0.1:8000/api/fruits/13' \
 --header 'Accept: application/json' \
---data ''|
+--data '' |
 
-| `GET`       | `/api/vegetables` | Fetch a list of vegetables with some filters| curl --location 'http://127.0.0.1:8000/api/vegetables?name=rot&minQuantity=50000&maxQuantity=65000' \--header 'Accept: application/json'|
-| `POST`      | `/api/vegetables` | Create a new fruit                      | curl --location 'http://127.0.0.1:8000/api/vegetables' \
---header 'Accept: application/json' \
---header 'Content-Type: application/json' \
---data '{
-    "name": "test_apple",
-    "quantity": 300,
-    "unit": "g"
-}'|
-| `DELETE`    | `/api/vegetables/{id}` | Delete a fruit by ID | curl --location --request DELETE 'http://127.0.0.1:8000/api/vegetables/13' \
---header 'Accept: application/json' \
+| `GET`       | `/api/vegetables` | Fetch a list of vegetables with some filters| curl --location 'http://127.0.0.1:8000/api/vegetables?name=rot&minQuantity=50000&maxQuantity=65000' \--header 'Accept: application json'|
+| `POST`      | `/api/vegetables` | Create a new vegetables                      | curl --location 'http://127.0.0.1:8000/api/vegetables' \ --header 'Accept: application/json' \ --header 'Content-Type: application/json' \ --data '{"name": "test_apple","quantity": 300,"unit": "g"}' |
+| `DELETE`    | `/api/vegetables/{id}` | Delete a vegetables by ID | curl --location --request DELETE 'http://127.0.0.1:8000/api/vegetables/13' \ --header 'Accept: application/json' \ |
